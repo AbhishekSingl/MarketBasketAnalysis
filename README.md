@@ -19,6 +19,7 @@ APRIORI ALGORITHM.
 Let's see how it works:
 
 For example we have data like below:
+
 Transactions:
 T1: Diaper, milk, candy
 T2: Milk, eggs
