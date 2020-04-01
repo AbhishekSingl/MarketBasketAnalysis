@@ -61,13 +61,13 @@ Apriori Pruing Principle: If there is any itemset which is infrequent, its super
 2. Limit the set of rules that meet the minimum confidence requirements. It answers - Can we rely on that rule or not? If so, how confident are we?
 
 ## Apriroi Algo (Pseudo-Code)
-* Set minimum required support
-* C<sub>k</sub>: Candidate item set of size k
-* L<sub>k</sub>: frequent item set of size k (from C<sub>k</sub>) with min_support
+Set minimum required support
+<br>C<sub>k</sub>: Candidate item set of size k
+<br>L<sub>k</sub>: frequent item set of size k (from C<sub>k</sub>) with min_support
 
-* L<sub>1</sub>: {frequent items};
-* for (k=1; L<sub>k</sub> $\neq$; k++)
-  <b>Begin:</b>
+<br>L<sub>1</sub>: {frequent items};
+<br>for (k=1; L<sub>k</sub> $\neq$; k++)
+<br>  <b>Begin:</b>
     C<sub>k+1</sub>: candidates generated from L<sub>k</sub>;
     <b>for each</b> transaction t in database <b>do</b>:
       Increment the count of all candidates in C<sub>k+1</sub> that are contained in t
