@@ -65,9 +65,9 @@ Set minimum required support
 <br>C<sub>k</sub>: Candidate item set of size k
 <br>L<sub>k</sub>: frequent item set of size k (from C<sub>k</sub>) with min_support
 
-<br>L<sub>1</sub>: {frequent items};
+L<sub>1</sub>: {frequent items};
 <br>for (k=1; L<sub>k</sub> $\neq$; k++)
-<br>  <b>Begin:</b>
+<br>'>'<b>Begin:</b>
     C<sub>k+1</sub>: candidates generated from L<sub>k</sub>;
     <b>for each</b> transaction t in database <b>do</b>:
       Increment the count of all candidates in C<sub>k+1</sub> that are contained in t
