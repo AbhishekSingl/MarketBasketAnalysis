@@ -40,12 +40,25 @@ Too many combinations
 * Inefficient Method:
   - As finding all combinations and then imputing their frequency is a long process and time-consuming.
 
-* Efficient Method - Using APRIORI APLOGRITHM:
+* Efficient Method - Using APRIORI ALGORITHM:
   - IF A -> X doesn't occur frequently.
   - THEN A & B -> X doesn't occur frequently either.
 
 Apriori Pruing Principle: If there is any itemset which is infrequent, its superset should not be generated/tested! 
 
+## Algorithm:
+### Stage I - Rules generation based on SUPPORT
+1. First Decide the minimum support.
+2. Find all frequent k-item sets (k=1 for start i.e. frequency of each product i.e. X1, X2, X3..).
+3. Keep the one with meet the minimum support threshold
+4. PRUNING - Generate new sets with (k+1) items (i.e. (X1, X2), (X2, X3), (X1, X3)....) from items which exists in upper level.
+5. Again Limit the list to frequent items based on min support value
+6. Repeat 2-5 until we have no frequent item set.
+7. Final combinations will be used to generate strong association rules.
+
+### Stage II - Filtering of Rules based on CONFIDENCE
+1. Not all rules are acceptable.
+2. Limit the set of rules that meet the minimum confidence requirements. It answers - Can we rely on that rule or not? If so, how confident are we?
 
 
 
