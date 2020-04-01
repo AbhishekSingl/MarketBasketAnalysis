@@ -1,4 +1,6 @@
-Put Instacart data here (from https://www.kaggle.com/c/instacart-market-basket-analysis/data):
+## DATASET
+
+Pull following Instacart data files from here - https://www.kaggle.com/c/instacart-market-basket-analysis/data
 
 1. Aisles.csv
 2. Departments.csv
