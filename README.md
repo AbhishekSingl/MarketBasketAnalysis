@@ -62,6 +62,19 @@ Apriori Pruing Principle: If there is any itemset which is infrequent, its super
 
 ## Apriroi Algo (Pseudo-Code)
 * Set minimum required support
-* C <sub>k</sub> : Candidate item set of size k
-* L <sub>k</sub> : frequent item set of size k
+* C<sub>k</sub>: Candidate item set of size k
+* L<sub>k</sub>: frequent item set of size k (from C<sub>k</sub>) with min_support
 
+* L<sub>1</sub>: {frequent items};
+* for (k=1; L<sub>k</sub> $\neq$; k++)
+  <b>Begin:</b>
+    C<sub>k+1</sub>: candidates generated from L<sub>k</sub>;
+    <b>for each</b> transaction t in database <b>do</b>:
+      Increment the count of all candidates in C<sub>k+1</sub> that are contained in t
+    L<sub>k+1</sub>: candidates in C<sub>k+1</sub> with min_support
+  <b>END</b>
+
+  <b>return</b> L<sub>1</sub> U L<sub>2</sub> U ... L<sub>k</sub>;
+
+
+    
