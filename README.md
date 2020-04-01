@@ -66,7 +66,7 @@ Set minimum required support
 <br>L<sub>k</sub>: frequent item set of size k (from C<sub>k</sub>) with min_support
 
 L<sub>1</sub>: {frequent items};
-<br>for (k=1; L<sub>k</sub> != NULL; k++)
+<br><b>for</b> (k=1; L<sub>k</sub> != NULL; k++)
 <br><b>Begin:</b>
 <br>&nbsp;&nbsp;C<sub>k+1</sub>: candidates generated from L<sub>k</sub>;
 <br>&nbsp;&nbsp;<b>for each</b> transaction t in database <b>do</b>:
@@ -76,5 +76,17 @@ L<sub>1</sub>: {frequent items};
 
   <b>return</b> L<sub>1</sub> U L<sub>2</sub> U ... L<sub>k</sub>;
 
+### Candidate Generation
+* How to generate candidates?
+ - Step 1: self-joining Lk
+ - Step 2: pruning
+* Example of Candidate-generation
+ - L3={abc, abd, acd, ace, bcd}
+ - Self-joining: L3*L3
+   - abcd from abc and abd
+   - acde from acd and ace
+* Pruning:
+ - acde is removed because ade is not in L3
+* C4 = {abcd}
 
     
