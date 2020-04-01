@@ -46,7 +46,7 @@ Too many combinations
 
 Apriori Pruing Principle: If there is any itemset which is infrequent, its superset should not be generated/tested! 
 
-## Algorithm:
+## Apriori Algorithm (Working):
 ### Stage I - Rules generation based on SUPPORT
 1. First Decide the minimum support.
 2. Find all frequent k-item sets (k=1 for start i.e. frequency of each product i.e. X1, X2, X3..).
@@ -60,5 +60,8 @@ Apriori Pruing Principle: If there is any itemset which is infrequent, its super
 1. Not all rules are acceptable.
 2. Limit the set of rules that meet the minimum confidence requirements. It answers - Can we rely on that rule or not? If so, how confident are we?
 
-
+## Apriroi Algo (Pseudo-Code)
+* Set minimum required support
+* C <sub>k</sub> : Candidate item set of size k
+* L <sub>k</sub> : frequent item set of size k
 
